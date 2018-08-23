@@ -222,7 +222,8 @@ module.exports = {
         a11yCurrentText: 'Results Pagination - Page 2',
         items: [
             {
-                type: 'previous'
+                type: 'previous',
+                disabled: true
             },
             {
                 current: true,

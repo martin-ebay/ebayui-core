@@ -38,12 +38,12 @@ function getInitialState(input) {
         if (item.type === 'previous') {
             prevItem = tempItem;
             prevItem.class = ['pagination__previous', item.class];
-            prevItem.disabled = Boolean(item.disabled) || !href;
+            prevItem.disabled = Boolean(item.disabled) || (!hijax && !href);
             continue;
         } else if (item.type === 'next') {
             nextItem = tempItem;
             nextItem.class = ['pagination__next', item.class];
-            nextItem.disabled = Boolean(item.disabled) || !href;
+            nextItem.disabled = Boolean(item.disabled) || (!hijax && !href);
             continue;
         } else {
             tempItem.class = ['pagination__item', item.class];
